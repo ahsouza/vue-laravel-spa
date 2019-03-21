@@ -1,5 +1,5 @@
 <template>
-  <Template>
+  <SiteTemplate>
 
     <public-content-vue />
     <card-content-vue
@@ -13,13 +13,13 @@
     />
     </card-content-vue>
 
-  </Template>
+  </SiteTemplate>
 
 
 </template>
 
 <script>
-import Template from '@/templates/Template'
+import SiteTemplate from '@/templates/SiteTemplate'
 import CardContentVue from '@/components/patterns/CardContentVue'
 import CardDetailVue from '@/components/patterns/CardDetailVue'
 import PublicContentVue from '@/components/patterns/PublicContentVue'
@@ -33,7 +33,7 @@ export default {
   },
   components:{
     CardContentVue,
-    Template,
+    SiteTemplate,
     CardDetailVue,
     PublicContentVue
   }

@@ -36,7 +36,7 @@
       </div>
     </main>
 
-    <footer-vue cor="green darken-1" logo="Social" descricao="Teste de descrição" ano="2018">
+    <footer-vue cor="green darken-1" logo="Social" descricao="Teste de descrição" ano="2019">
 
       <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
       <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
@@ -56,7 +56,7 @@ import GridVue from '@/components/layouts/GridVue'
 import CardMenuVue from '@/components/layouts/CardMenuVue'
 
 export default {
-  name: 'Template',
+  name: 'SiteTemplate',
   components:{
     NavBar,
     FooterVue,

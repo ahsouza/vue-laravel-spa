@@ -1,22 +1,16 @@
 <template>
-<span>
-  <public-content-vue />
-  <card-content-vue
-  perfil="http://materializecss.com/images/yuna.jpg"
-  nome="Aníbal Henrique"
-  data="21/03/2019 16:52">
-  <card-detail-vue
-  img="https://materializecss.com/images/sample-1.jpg"
-  txt="Jogo educacional causa vicío em escolas para ensino fundamental e médio em toda região da grande Vitória"
-  title="A aplicação IQuizz é show!"
-  />
-  </card-content-vue>
-</span>
+
+  <LoginTemplate>
+    <input type="text" placeholder="E-mail" value="">
+    <input type="password" placeholder="Senha" value="">
+    <button type="button" class="btn">ENTRAR</button>
+  </LoginTemplate>
 
 
 </template>
 
 <script>
+import LoginTemplate from '@/templates/LoginTemplate'
 import CardContentVue from '@/components/patterns/CardContentVue'
 import CardDetailVue from '@/components/patterns/CardDetailVue'
 import PublicContentVue from '@/components/patterns/PublicContentVue'
@@ -31,6 +25,7 @@ export default {
   components:{
     CardContentVue,
     CardDetailVue,
+    LoginTemplate,
     PublicContentVue
   }
 }
