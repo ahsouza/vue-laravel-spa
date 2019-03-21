@@ -1,16 +1,25 @@
 <template>
-  <card-content-vue perfil="http://materializecss.com/images/yuna.jpg"
-  nome="Maria Silva"
-  data="13/01/18 13:30">
-
-  <card-detail-vue img="https://materializecss.com/images/sample-1.jpg" txt="Jogo educacional causa vicío em escolas para ensino fundamental e médio em toda região da grande Vitória" title="A aplicação IQuizz é show!"></card-detail-vue>
+<span>
+  <public-content-vue />
+  <card-content-vue
+  perfil="http://materializecss.com/images/yuna.jpg"
+  nome="Aníbal Henrique"
+  data="21/03/2019 16:52">
+  <card-detail-vue
+  img="https://materializecss.com/images/sample-1.jpg"
+  txt="Jogo educacional causa vicío em escolas para ensino fundamental e médio em toda região da grande Vitória"
+  title="A aplicação IQuizz é show!"
+  />
   </card-content-vue>
+</span>
+
 
 </template>
 
 <script>
 import CardContentVue from '@/components/patterns/CardContentVue'
 import CardDetailVue from '@/components/patterns/CardDetailVue'
+import PublicContentVue from '@/components/patterns/PublicContentVue'
 
 export default {
   name: 'Home',
@@ -21,7 +30,8 @@ export default {
   },
   components:{
     CardContentVue,
-    CardDetailVue
+    CardDetailVue,
+    PublicContentVue
   }
 }
 </script>

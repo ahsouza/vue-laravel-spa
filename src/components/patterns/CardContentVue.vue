@@ -1,5 +1,5 @@
 <template>
-
+<div class="row">
   <div class="card">
     <div class="card-content">
       <div class="row valign-wrapper">
@@ -9,7 +9,6 @@
         <grid-vue tamanho="11">
           <span class="black-text">
             <strong>{{nome}}</strong> - <small>{{data}}</small>
-
           </span>
         </grid-vue>
       </div>
@@ -24,7 +23,7 @@
       </p>
     </div>
   </div>
-
+</div>
 </template>
 
 <script>
