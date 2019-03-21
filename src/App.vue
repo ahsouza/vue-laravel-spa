@@ -1,13 +1,17 @@
 <template>
-  <div id="app">
+  <div>
+    <NavBar cor="green"/>
     <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
+import NavBar from '@/components/layouts/NavBar'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {NavBar}
 }
 </script>
 
