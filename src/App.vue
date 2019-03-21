@@ -3,65 +3,65 @@
     <header>
       <NavBar logo="CRECI-ES" url="#" cor="green"/>
     </header>
+        <main>
+          <div class="container">
+            <div class="row">
+              <grid-vue tamanho="4">
+                <card-menu-vue>
+                  <div class="row valign-wrapper">
+                    <grid-vue tamanho="4">
+                      <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                    </grid-vue>
+                    <grid-vue tamanho="8">
+                      <span class="black-text">
+                        <h5>Aníbal Henrique</h5>
+                        Laravel && Vue
+                      </span>
+                    </grid-vue>
+                  </div>
+                </card-menu-vue>
+                <card-menu-vue>
+                  <h3>Teste</h3>
+                </card-menu-vue>
+              </grid-vue>
+              <grid-vue tamanho="8">
+                <router-view/>
+              </grid-vue>
 
-    <main>
-      <div class="container">
+            </div>
+          </div>
+        </main>
 
-      <div class="row">
-       <div class="col s4">
+        <footer-vue cor="green darken-1" logo="Social" descricao="Teste de descrição" ano="2018">
 
-        <CardMenuVue>
+          <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
 
-           <div class="row valign-wrapper">
-             <div class="col s4">
-               <img src="https://materializecss.com/images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-             </div>
-             <div class="col s8">
-               <span class="black-text">
-                 <h5>Aníbal Henrique</h5>
-                 Web Develop FullStack
-               </span>
-             </div>
-           </div>
-         </CardMenuVue>
-
-       </div>
-       <div class="col s8"><router-view/></div>
-      </div>
-
-      </div>
-    </main>
+        </footer-vue>
 
 
-    <FooterVue cor="blue" logo="Logo Footer" description="logo-site">
-      <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-      <li><a class="grey-text text-lighten-3" href="#!">Contato</a></li>
-      <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-      <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-    </FooterVue>
+      </span>
+    </template>
 
-  </span>
-</template>
+    <script>
+    import NavBar from '@/components/layouts/NavBar'
+    import FooterVue from '@/components/layouts/FooterVue'
+    import GridVue from '@/components/layouts/GridVue'
+    import CardMenuVue from '@/components/layouts/CardMenuVue'
 
-<script>
-import NavBar from '@/components/layouts/NavBar'
-import FooterVue from '@/components/layouts/FooterVue'
-import GridVue from '@/components/layouts/GridVue'
-import CardMenuVue from '@/components/layouts/CardMenuVue'
+    export default {
+      name: 'app',
+      components:{
+        NavBar,
+        FooterVue,
+        GridVue,
+        CardMenuVue
+      }
+    }
+    </script>
 
-export default {
-  name: 'App',
-  components: {NavBar, FooterVue, GridVue, CardMenuVue}
-}
-</script>
+    <style>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+    </style>
