@@ -6,7 +6,29 @@
 
     <main>
       <div class="container">
-        <router-view/>
+
+      <div class="row">
+       <div class="col s4">
+
+        <CardMenuVue>
+
+           <div class="row valign-wrapper">
+             <div class="col s4">
+               <img src="https://materializecss.com/images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+             </div>
+             <div class="col s8">
+               <span class="black-text">
+                 <h5>Aníbal Henrique</h5>
+                 Web Develop FullStack
+               </span>
+             </div>
+           </div>
+         </CardMenuVue>
+
+       </div>
+       <div class="col s8"><router-view/></div>
+      </div>
+
       </div>
     </main>
 
@@ -24,10 +46,12 @@
 <script>
 import NavBar from '@/components/layouts/NavBar'
 import FooterVue from '@/components/layouts/FooterVue'
+import GridVue from '@/components/layouts/GridVue'
+import CardMenuVue from '@/components/layouts/CardMenuVue'
 
 export default {
   name: 'App',
-  components: {NavBar, FooterVue}
+  components: {NavBar, FooterVue, GridVue, CardMenuVue}
 }
 </script>
 
