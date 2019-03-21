@@ -1,29 +1,48 @@
 <template>
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">Card Title</span>
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
+
+  <div class="card">
+    <div class="card-content">
+      <div class="row valign-wrapper">
+        <grid-vue tamanho="1">
+          <img :src="perfil" :alt="nome" class="circle responsive-img"> <!-- notice the "circle" class -->
+        </grid-vue>
+        <grid-vue tamanho="11">
+          <span class="black-text">
+            <strong>{{nome}}</strong> - <small>{{data}}</small>
+
+          </span>
+        </grid-vue>
       </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
-        <a href="#">This is a link</a>
-      </div>
+
+      <slot />
+
     </div>
+    <div class="card-action">
+      <p>
+        <i class="material-icons">favorite_border</i>
+        <i class="material-icons">insert_comment</i>
+      </p>
+    </div>
+  </div>
+
 </template>
 
 <script>
+import GridVue from '@/components/layouts/GridVue'
+
 export default {
   name: 'CardContentVue',
-  props: [],
+  props:['perfil','nome','data'],
   data () {
     return {
 
     }
+  },
+  components:{
+    GridVue
   }
 }
 </script>
-
 <style scoped>
 
 </style>
