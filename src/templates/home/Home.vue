@@ -3,21 +3,14 @@
   nome="Maria Silva"
   data="13/01/18 13:30">
 
-  <div class="card-image">
-    <img src="http://materializecss.com/images/sample-1.jpg">
-    <span class="card-title">Card Title</span>
-  </div>
-
-  <div class="card-content">
-    <p>I am a very simple card. I am good at containing small bits of information.
-    I am convenient because I require little markup to use effectively.</p>
-  </div>
-
+  <card-detail-vue img="https://materializecss.com/images/sample-1.jpg" txt="Jogo educacional causa vicío em escolas para ensino fundamental e médio em toda região da grande Vitória" title="A aplicação IQuizz é show!"></card-detail-vue>
   </card-content-vue>
+
 </template>
 
 <script>
 import CardContentVue from '@/components/patterns/CardContentVue'
+import CardDetailVue from '@/components/patterns/CardDetailVue'
 
 export default {
   name: 'Home',
@@ -27,7 +20,8 @@ export default {
     }
   },
   components:{
-    CardContentVue
+    CardContentVue,
+    CardDetailVue
   }
 }
 </script>
