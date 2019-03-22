@@ -8,6 +8,9 @@
 # install dependencies
 npm install
 
+# install dependencies composer
+composer update
+
 # serve with hot reload at localhost:8080
 npm run dev
 
