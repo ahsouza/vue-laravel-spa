@@ -3,8 +3,7 @@
     <header>
       <nav-bar logo="Social" url="#/" cor="grey darken-4">
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/contato">Contato</router-link></li>
-        <li><router-link to="/portfolio">Portfólio</router-link></li>
+        <li><router-link to="/register">Cadastre-se</router-link></li>
         <li><a href="sass.html"><i class="material-icons">search</i></a></li>
         <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
       </nav-bar>

@@ -6,11 +6,15 @@
     </span>
 
     <span slot="main">
-        <h2>Login </h2>
+
+
+        <h2>Create Account </h2>
+        <input type="text" placeholder="Nome" value="">
         <input type="text" placeholder="E-mail" value="">
         <input type="password" placeholder="Senha" value="">
-        <button class="btn">ENTRAR</button>
-        <router-link class="btn orange" to="/register">CADASTRE-SE</router-link>
+        <input type="password" placeholder="Confirme sua senha" value="">
+        <button class="btn">ENVIAR</button>
+        <router-link class="btn orange" to="/login">JÁ TENHO UMA CONTA</router-link>
 
     </span>
 
@@ -21,7 +25,7 @@
 import LoginTemplate from '@/templates/LoginTemplate'
 
 export default {
-  name: 'Home',
+  name: 'Register',
   data () {
     return {
     }
