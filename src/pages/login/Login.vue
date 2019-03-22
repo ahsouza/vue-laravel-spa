@@ -1,9 +1,17 @@
 <template>
 
   <LoginTemplate>
-    <input type="text" placeholder="E-mail" value="">
-    <input type="password" placeholder="Senha" value="">
-    <button type="button" class="btn">ENTRAR</button>
+    <span slot="menu-left">
+      <img src="https://i.pinimg.com/280x280_RS/65/69/56/656956ace2c3031518da07bcddf8b24b.jpg" class="responsive-img" alt="@ahsouza">
+    </span>
+
+    <span slot="main">
+      <h2>Login </h2>
+      <input type="text" placeholder="E-mail" value="">
+      <input type="password" placeholder="Senha" value="">
+      <button type="button" class="btn">ENTRAR</button>
+
+    </span>
   </LoginTemplate>
 
 

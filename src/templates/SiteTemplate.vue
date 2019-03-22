@@ -1,7 +1,14 @@
 <template>
   <span>
     <header>
-      <nav-bar logo="Social" url="#" cor="green darken-1" />
+      <nav-bar logo="Social" url="# /" cor="green darken-1" >
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/login">Entrar</router-link></li>
+        <li><router-link to="/contato">Contato</router-link></li>
+        <li><router-link to="/portfolio">Portfólio</router-link></li>
+        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+      </nav-bar>
     </header>
 
     <main>
@@ -10,15 +17,7 @@
           <grid-vue tamanho="4">
             <card-menu-vue>
               <div class="row valign-wrapper">
-                <grid-vue tamanho="4">
-                  <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                </grid-vue>
-                <grid-vue tamanho="8">
-                  <span class="black-text">
-                    <h5>Aníbal Henrique</h5>
-                    Add the "circle" class to it to make it appear circular.
-                  </span>
-                </grid-vue>
+                <slot name="menu-left" />
               </div>
             </card-menu-vue>
             <card-menu-vue>
@@ -26,17 +25,14 @@
             </card-menu-vue>
           </grid-vue>
           <grid-vue tamanho="8">
-            <slot />
+            <slot name="main" />
           </grid-vue>
 
         </div>
-
-
-
       </div>
     </main>
 
-    <footer-vue cor="green darken-1" logo="Social" descricao="Teste de descrição" ano="2019">
+    <footer-vue cor="green darken-1" logo="Social" descricao="Sua de descrição" ano="2019">
 
       <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
       <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>

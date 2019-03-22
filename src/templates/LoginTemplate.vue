@@ -1,26 +1,33 @@
 <template>
   <span>
     <header>
-      <nav-bar logo="Social" url="#" cor="green darken-1" />
+      <nav-bar logo="Social" url="#/" cor="grey darken-4">
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/contato">Contato</router-link></li>
+        <li><router-link to="/portfolio">Portfólio</router-link></li>
+        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+      </nav-bar>
     </header>
 
     <main>
       <div class="container">
         <div class="row">
-          <grid-vue tamanho="4">
-            <card-menu-vue>
-
-            </card-menu-vue>
+          <grid-vue tamanho="6">
+              <slot name="menu-left" />
           </grid-vue>
-          <grid-vue tamanho="8">
-            <slot />
+
+          <grid-vue tamanho="6">
+            <CardMenuVue>
+              <slot name="main" />
+            </CardMenuVue >
           </grid-vue>
 
         </div>
       </div>
     </main>
 
-    <footer-vue cor="green darken-1" logo="Social" descricao="Teste de descrição" ano="2019">
+    <footer-vue cor="grey darken-3" logo="Social" descricao="Teste de descrição" ano="2019">
 
       <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
       <li><a class="grey-text text-lighten-3" href="#!">Contato</a></li>
