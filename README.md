@@ -5,6 +5,8 @@
 ## Build Setup
 
 ``` bash
+# up images
+docker-compose up-d
 # install dependencies
 npm install
 
