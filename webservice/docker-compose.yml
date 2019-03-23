@@ -1,32 +1,61 @@
-# v2 syntax
-version: '2'
-#Named volumes
-volumes:
-  #MySQL Data
-  webservice-mysql-data:
-    driver: local
-
+version: '3'
 services:
-  # MySQL 5.7
-  mysql:
-    image: ambientum/mysql:5.7
-    container_name: webservice-mysql
+  #PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: digitalocean.com/php
+    container_name: app
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
     volumes:
-      - webservice-mysql-data:/var/lib/mysql
+      - ./:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - app-network
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - app-network
+
+  #MySQL Service
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    restart: unless-stopped
+    tty: true
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=webservice
-      - MYSQL_DATABASE=webservice
-      - MYSQL_USER=webservice
-      - MYSQL_PASSWORD=webservice
-  # PHP (with Caddy)
-  app:
-    image: ambientum/php:7.1-caddy
-    container_name: webservice-app
+      MYSQL_DATABASE: webservice
+      MYSQL_ROOT_PASSWORD: webservice
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
     volumes:
-      - .:/var/www/app
-    ports:
-      - "80:8080"
-    links:
-      - mysql
+      - dbdata:/var/lib/mysql/
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-network
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
+#Volumes
+volumes:
+  dbdata:
+    driver: local

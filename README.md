@@ -2,25 +2,36 @@
 
 > A Vue.js project
 
-## Build Setup
+## Build Client-Side Setup
 
 ``` bash
-# up images
-docker-compose up-d
 # install dependencies
 npm install
-
-# install dependencies composer
-composer update
 
 # serve with hot reload at localhost:8080
 npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Build Server-Side Api Setup
+# enter webservice
+bash
+cd webservice/
+
+# install dependencies
+composer install
+
+# generate a new application key
+cp .env.example .env
+php artisan key:generate
+
+# generate a secrect key to encript/decript your access tokens
+php artisan jwt:generate
+
+# add to .env your database info to connect
+nano .env
+
+# start serve at localhost:8000
+php artisan serve
