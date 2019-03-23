@@ -15,9 +15,10 @@ npm run dev
 npm run build
 ```
 
-Build Server-Side Api Setup
+## Build Server-Side Api Setup
+
+``` bash
 # enter webservice
-bash
 cd webservice/
 
 # install dependencies
@@ -35,3 +36,4 @@ nano .env
 
 # start serve at localhost:8000
 php artisan serve
+```
