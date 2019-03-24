@@ -12,8 +12,8 @@ OR
 
 # Implementing homestead environment
 ### 1 Step
-- [Install Vagrant](https://www.vagrantup.com/)
-- [Install VirtualBox](https://www.virtualbox.org/)
+- Install Vagrant - https://www.vagrantup.com/
+- Install VirtualBox - https://www.virtualbox.org/
 
 ### 2 Step - Line commands    
 1. $vagrant box add laravel/homestead
