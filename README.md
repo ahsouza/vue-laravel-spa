@@ -15,15 +15,15 @@ OR
 - Install Vagrant - https://www.vagrantup.com/
 - Install VirtualBox - https://www.virtualbox.org/
 
-### 2 Step - Line commands    
+### 2 Step - Line commands in your dir
 1. $vagrant box add laravel/homestead
 3. $cd ~ && git clone https://github.com/laravel/homestead.git Homestead
 4. $cd Homestead && bash init.sh
 5. $ssh-keygen -t rsa -C "youremail@gmail.com"
 
-### 3 Step - Run vagrant
-- Then setup Homestead.yaml and Host file.
-- Then run vagrant up
+### 3 Step - Setting Homestead.yaml and Host file on Windows
+1. Adding ip and domain from Homestead.yaml to C:\Windows\System32\drivers\etc\hosts
+2. $vagrant up
 ```
 
 ## Build Server-Side Api Setup
