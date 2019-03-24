@@ -5,8 +5,26 @@
 ## Build Client-Side Setup
 
 ``` bash
-# install dependencies, up image serve, run app
+# Dockerizing app client-side
 ./run.sh
+
+OR
+
+# Implementing homestead environment
+### 1 Step
+- [Install Vagrant](https://www.vagrantup.com/)
+- [Install VirtualBox](https://www.virtualbox.org/)
+
+### 2 Step - Line commands    
+1. $vagrant box add laravel/homestead
+2. $vagrant box add laravel/homestead
+3. $cd ~ && git clone https://github.com/laravel/homestead.git Homestead
+4. $cd Homestead && bash init.sh
+5. $ssh-keygen -t rsa -C "youremail@gmail.com"
+
+### 3 Step - Run vagrant
+- Then setup Homestead.yaml and Host file.
+- Then run vagrant up
 ```
 
 ## Build Server-Side Api Setup
