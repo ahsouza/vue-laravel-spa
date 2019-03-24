@@ -17,7 +17,6 @@ OR
 
 ### 2 Step - Line commands    
 1. $vagrant box add laravel/homestead
-2. $vagrant box add laravel/homestead
 3. $cd ~ && git clone https://github.com/laravel/homestead.git Homestead
 4. $cd Homestead && bash init.sh
 5. $ssh-keygen -t rsa -C "youremail@gmail.com"
