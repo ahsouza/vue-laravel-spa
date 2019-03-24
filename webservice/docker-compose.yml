@@ -32,7 +32,6 @@ services:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
       - app-network
-
   #MySQL Service
   db:
     image: mysql:5.7.22
