@@ -6,7 +6,9 @@
 
 ``` bash
 # Dockerizing app client-side
-./run.sh
+1. $cd webservice/
+2. $chmod a+x run.sh && ./run.sh
+
 
 OR
 
