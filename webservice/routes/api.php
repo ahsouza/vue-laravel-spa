@@ -20,6 +20,8 @@ Route::post('/register', function (Request $request){
     'email' => $data['email'],
     'password' => bcrypt($data['password']),
   ]);
+  $user->token = $user->createToken($user->email)->accessToken;
+
   return $user;
 });
 
