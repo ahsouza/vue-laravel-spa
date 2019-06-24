@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /var/www
 cd api/
 rm -rf vendor/
 composer install
