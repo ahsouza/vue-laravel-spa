@@ -1,7 +1,7 @@
 ### Steps comands
 
 ```sh
- # Ativando levantamento de imagem com ambiente laravel para container
+ # Ativando levantamento de imagem com ambiente laravel container
  ./run.sh
  # Alterando o caminho de dentro do container
  cd ..
