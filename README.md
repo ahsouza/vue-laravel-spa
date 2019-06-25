@@ -5,3 +5,12 @@
  ./dev.run.sh
 
  ```
+
+### To docker-compose build-develop
+
+```sh
+ # Levantar projeto
+ docker-compose up
+
+ ```
+
