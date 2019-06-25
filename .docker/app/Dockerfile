@@ -7,13 +7,13 @@ RUN rm -rf /var/www/html
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN composer install --no-plugins --no-scripts && \
-    cp .env.example .env && \
-    php artisan key:generate && \
-    php artisan config:cache
+# RUN composer install --no-plugins --no-scripts && \
+#     cp .env.example .env && \
+#     php artisan key:generate && \
+#     php artisan config:cache
 
 
-COPY ../../api/ /var/www
+COPY . /var/www
 RUN ln -s public html
 
 
