@@ -6,13 +6,13 @@ RUN apk add bash && \
     apk add composer
 
 RUN rm -rf /var/www/html
-COPY .docker/app/ /var/www
-RUN rm -rf vendor && \
-	composer update && \
-	php artisan key:generate && \
-	php artisan serve --host=0.0.0.0
 
-RUN ls -s public html
+COPY .docker/app/ /var/www
+RUN rm -rf vendor
+#	composer update && \
+#	php artisan key:generate && \
+#	php artisan serve --host=0.0.0.0
+RUN ln -s public html
 
 EXPOSE 9000
 ENTRYPOINT ["php-fpm"]

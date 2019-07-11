@@ -19,7 +19,7 @@ Laravel aims to make the development process a pleasing one for the developer wi
 
 Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-# Using Docker
+# Using with Docker
 
 ![alt text](https://logz.io/wp-content/uploads/2016/01/docker-facebook-1024x536-1-1024x536.png)
 
