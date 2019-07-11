@@ -1,6 +1,5 @@
 #!/bin/bash
-cd api/
-rm -rf vendor/
-composer install
-php artisan key:generate
+
+
+composer update
 php artisan serve --host=0.0.0.0
